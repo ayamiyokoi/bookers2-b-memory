@@ -23,7 +23,9 @@
           <tr>
             <td><%= @books_today.count %></td>
             <td><%= @books_yesterday.count %></td>
-            <td></td>
+            <% if @books_yesterday.count.to_i != 0 %>
+            <td><%= number_to_percentage (@books_today.count.to_i.div(@books_yesterday.count.to_i )) * 100, precision: 0 %></td>
+            <% end %>
           </tr>
         </tbody>
       </table>
@@ -41,7 +43,9 @@
           <tr>
             <td><%= @books_a_week_ago.count %></td>
             <td><%= @books_two_week_ago.count %></td>
-            <td></td>
+            <% if @books_two_week_ago.count != 0 %>
+            <td><%= number_to_percentage (@books_a_week_ago.count.to_i.div(@books_two_week_ago.count.to_i)) * 100, precision: 0 %></td>
+            <% end %>
           </tr>
         </tbody>
       </table>
