@@ -9,6 +9,32 @@
     <div class='col-md-8 offset-md-1'>
       <h2>Books</h2>
       <%= render 'index', books: @books%>
+      <h2>7日分の投稿数</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>6日前</th>
+            <th>5日前</th>
+            <th>4日前</th>
+            <th>3日前</th>
+            <th>2日前</th>
+            <th>1日前</th>
+            <th>今日</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th><%= @books6.count %></th>
+            <th><%= @books5.count %></th>
+            <th><%= @books4.count %></th>
+            <th><%= @books3.count %></th>
+            <th><%= @books2.count %></th>
+            <th><%= @books1.count %></th>
+            <th><%= @books0.count %></th>
+          </tr>
+        </tbody>
+      </table>
+      <!--グラフ部分-->
     </div>
   </div>
 </div>

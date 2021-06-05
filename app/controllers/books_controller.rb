@@ -11,6 +11,13 @@ class BooksController < ApplicationController
   def index
     @books = Book.all
     @book = Book.new
+    @books0 = Book.where(created_at: Time.zone.now.all_day)
+    @books1 = Book.where(created_at: 1.day.ago.all_day)
+    @books2 = Book.where(created_at: 2.day.ago.all_day)
+    @books3 = Book.where(created_at: 3.day.ago.all_day)
+    @books4 = Book.where(created_at: 4.day.ago.all_day)
+    @books5 = Book.where(created_at: 5.day.ago.all_day)
+    @books6 = Book.where(created_at: 6.day.ago.all_day)
   end
 
   def create

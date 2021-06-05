@@ -14,11 +14,14 @@ class UsersController < ApplicationController
     to  = (today - 7.day).at_beginning_of_day
     from  = (to - 13.day).at_beginning_of_day
     @books_two_week_ago = Book.where(created_at: from...to, user_id: @user.id)
+    
+    
   end
 
   def index
     @users = User.all
     @book = Book.new
+  
   end
 
 
