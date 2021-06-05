@@ -9,6 +9,43 @@
     <div class='col-md-8 offset-md-1'>
       <h2>Books</h2>
       <%= render 'books/index',books: @books %>
+      <h2>投稿数の前日比・前週比</h2>
+      <!--一段目-->
+      <table>
+        <thead>
+          <tr>
+            <th>今日の投稿数</th>
+            <th>前日の投稿数</th>
+            <th>前日比</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><%= @books_today.count %></td>
+            <td><%= @books_yesterday.count %></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!--二段目-->
+      <table>
+        <thead>
+          <tr>
+            <th>今週の投稿数</th>
+            <th>前週の投稿数</th>
+            <th>前週比</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><%= @books_a_week_ago.count %></td>
+            <td><%= @books_two_week_ago.count %></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
     </div>
   </div>
 </div>

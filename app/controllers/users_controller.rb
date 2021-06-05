@@ -5,6 +5,15 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @books = @user.books
     @book = Book.new
+    @books_today = Book.where(created_at: Time.zone.now.all_day, user_id: @user.id)
+    @books_yesterday = Book.where(created_at: 1.day.ago.all_day, user_id: @user.id)
+    to  = Time.current.at_end_of_day
+    from  = (to - 6.day).at_beginning_of_day
+    @books_a_week_ago = Book.where(created_at: from...to, user_id: @user.id)
+    today = Time.current.at_end_of_day
+    to  = (today - 7.day).at_beginning_of_day
+    from  = (to - 13.day).at_beginning_of_day
+    @books_two_week_ago = Book.where(created_at: from...to, user_id: @user.id)
   end
 
   def index
