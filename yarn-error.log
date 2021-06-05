@@ -1,0 +1,36 @@
+Arguments: 
+  /home/ec2-user/.nvm/versions/node/v10.24.1/bin/node /home/ec2-user/.nvm/versions/node/v10.24.1/bin/yarn install
+
+PATH: 
+  /home/ec2-user/.rvm/gems/ruby-2.6.3/bin:/home/ec2-user/.rvm/gems/ruby-2.6.3@global/bin:/home/ec2-user/.rvm/rubies/ruby-2.6.3/bin:/home/ec2-user/.rvm/bin:/home/ec2-user/.nvm/versions/node/v10.24.1/bin:/usr/local/bin:/usr/bin:/home/ec2-user/.local/bin:/home/ec2-user/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin:/home/ec2-user/.local/bin:/home/ec2-user/bin:/usr/local/bin:/home/ec2-user/.local/bin:/home/ec2-user/bin:/home/ec2-user/.local/bin:/home/ec2-user/bin:/usr/local/bin:/home/ec2-user/.local/bin:/home/ec2-user/bin
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  10.24.1
+
+Platform: 
+  linux x64
+
+Trace: 
+  SyntaxError: /home/ec2-user/environment/bookers2-b-memory/package.json: Unexpected string in JSON at position 73
+      at JSON.parse (<anonymous>)
+      at /home/ec2-user/.nvm/versions/node/v10.24.1/lib/node_modules/yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/home/ec2-user/.nvm/versions/node/v10.24.1/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /home/ec2-user/.nvm/versions/node/v10.24.1/lib/node_modules/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "Bookers2_ver2",
+    "private": true,
+    "dependencies": {}
+      "chart.js": "^2.7.1"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
